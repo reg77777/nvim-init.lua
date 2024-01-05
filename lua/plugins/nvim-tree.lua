@@ -5,8 +5,8 @@ return {
         vim.g.loaded_netrwPlugin = 1
         vim.opt.termguicolors = true
 
-        vim.keymap.set('n','tt','<Cmd>NvimTreeToggle<CR>')
-        vim.keymap.set('n','td','<Cmd>bd<CR>')
+        vim.keymap.set('n','ff','<Cmd>NvimTreeToggle<CR>')
+        vim.keymap.set('n','fd','<Cmd>bd<CR>')
 
 
         require("nvim-tree").setup({
