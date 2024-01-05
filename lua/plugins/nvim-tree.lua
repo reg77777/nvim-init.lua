@@ -5,13 +5,8 @@ return {
         vim.g.loaded_netrwPlugin = 1
         vim.opt.termguicolors = true
 
-
-        -- 常時起動
-        local function open_nvim_tree()
-            require("nvim-tree.api").tree.open()
-        end
-
-        vim.api.nvim_create_autocmd({"VimEnter"},{callback=open_nvim_tree})
+        vim.keymap.set('n','tt','<Cmd>NvimTreeToggle<CR>')
+        vim.keymap.set('n','td','<Cmd>bd<CR>')
 
 
         require("nvim-tree").setup({
@@ -19,7 +14,7 @@ return {
                 sorter = "case_sensitive",
             },
             view = {
-                width = 20,
+                width = 30,
             },
             renderer = {
                 group_empty = true,
