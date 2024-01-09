@@ -6,6 +6,7 @@ return {
                 "lua_ls",
                 "rubocop",
                 "clangd",
+                "hls"
             }
         })
         require("mason-lspconfig").setup_handlers {
